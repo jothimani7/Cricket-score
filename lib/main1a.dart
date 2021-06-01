@@ -41,9 +41,9 @@ class _PlayersNameState extends State<PlayersName> {
                   )
                 ),
               ),
-            RaisedButton(
-              textColor: Colors.white60,
-              color: Colors.grey,
+            ElevatedButton(
+              // textColor: Colors.white60,
+              // color: Colors.grey,
               child: Icon(Icons.add),
               onPressed: (){
                 _navigateAndDisplay(context);
@@ -105,8 +105,7 @@ class _AddPlayerState extends State<AddPlayer> {
                   labelText: 'Enter Player Field',
                 ),
               ),
-              RaisedButton(
-
+              ElevatedButton(
                 child: Text('Add palyer'),
                 onPressed: (){
                   // obj.title=name.text;
