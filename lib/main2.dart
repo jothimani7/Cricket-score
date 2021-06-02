@@ -10,10 +10,10 @@ class Home2 extends StatefulWidget {
 }
 
 class _Home2State extends State<Home2> {
-  String opanent,over,toss,tossWon,field;
+  String opanent='',over,toss,tossWon,field;
   TextEditingController opname = TextEditingController();
   TextEditingController place = TextEditingController();
-  List<String> tossWons=['You','Opanent'];
+  List<String> tossWons=['We','Opanent'];
   List<String> tos=['Head','Tail'];
   List<String> overs=['6 Overs','8 Overs','10 Overs','12 Overs','14 Overs'];
   @override
@@ -32,6 +32,10 @@ class _Home2State extends State<Home2> {
               children: <Widget>[
                 Container(
                   child: TextField(
+                    focusNode: DisableFocus(),
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                     controller: opname,
                     decoration: InputDecoration(
                       enabledBorder: const OutlineInputBorder(
@@ -50,6 +54,7 @@ class _Home2State extends State<Home2> {
                 ),
                 Container(
                   child: TextField(
+                    focusNode: DisableFocus(),
                     style: TextStyle(
                       color: Colors.white,
                     ),
@@ -146,7 +151,7 @@ class _Home2State extends State<Home2> {
                       // focusColor: Colors.blue,
                       icon: Icon(Icons.arrow_drop_down_circle),
                       underline: SizedBox(),
-                      hint: Text('who won the toss'),
+                      hint: Text('Toss won by'),
                       value: tossWon,
                       onChanged: (newValue){
                         setState(() {
@@ -220,7 +225,31 @@ class _Home2State extends State<Home2> {
                         onPressed: (){
                           opanent = opname.text;
                           print(opname.text);
-                          Navigator.of(context).push(MaterialPageRoute(builder:(context)=> Match(opanent: opanent,over: over,tos: toss,tossWon: tossWon,field: field)));
+                          if(opname==null||opanent==''|| over==null|| toss==null|| tossWon==null|| field==null){
+                            showDialog<String>(
+                              context: context,
+                              builder: (buildContext)=> AlertDialog(
+                                title: const Text('Missed Field'),
+                                content: const Text('Fill All Field'),
+                                actions: <Widget>[
+                                  TextButton(
+                                    onPressed: ()=> Navigator.pop(context,'Ok'),
+                                    child: const Text('Ok'),
+                                  ),
+                                ],
+                              )
+                            );
+                            // Navigator.pop(context,"please fill all fields");
+                          }
+                          else {
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) =>
+                                    Match(opanent: opanent,
+                                        over: over,
+                                        tos: toss,
+                                        tossWon: tossWon,
+                                        field: field)));
+                          }
                         },
                       ),
                     ),
@@ -233,5 +262,13 @@ class _Home2State extends State<Home2> {
       ),
       backgroundColor: Colors.blue[300],
     );
+  }
+}
+
+
+class DisableFocus extends FocusNode{
+  @override
+  bool consumeKeyboardToken(){
+    return false;
   }
 }
