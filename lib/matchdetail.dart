@@ -2,7 +2,7 @@
 // import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:bulls/main3.dart';
+import 'package:bulls/match.dart';
 
 class Home2 extends StatefulWidget {
   @override
@@ -44,7 +44,7 @@ class _Home2State extends State<Home2> {
                       border: OutlineInputBorder(),
                       labelText: 'Enter Openant name',
                       labelStyle: TextStyle(
-                        color: Colors.white
+                          color: Colors.white
                       ),
                     ),
                   ),
@@ -209,12 +209,12 @@ class _Home2State extends State<Home2> {
                       child: ElevatedButton(
                         style: ButtonStyle(
 
-                          shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                            RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(28.0),
-                              side: BorderSide(color: Colors.blueAccent)
+                            shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(28.0),
+                                    side: BorderSide(color: Colors.blueAccent)
+                                )
                             )
-                          )
                         ),
                         child: Text('Start Match',
                           style: TextStyle(
@@ -227,17 +227,17 @@ class _Home2State extends State<Home2> {
                           print(opname.text);
                           if(opname==null||opanent==''|| over==null|| toss==null|| tossWon==null|| field==null){
                             showDialog<String>(
-                              context: context,
-                              builder: (buildContext)=> AlertDialog(
-                                title: const Text('Missed Field'),
-                                content: const Text('Fill All Field'),
-                                actions: <Widget>[
-                                  TextButton(
-                                    onPressed: ()=> Navigator.pop(context,'Ok'),
-                                    child: const Text('Ok'),
-                                  ),
-                                ],
-                              )
+                                context: context,
+                                builder: (buildContext)=> AlertDialog(
+                                  title: const Text('Missed Field'),
+                                  content: const Text('Fill All Field'),
+                                  actions: <Widget>[
+                                    TextButton(
+                                      onPressed: ()=> Navigator.pop(context,'Ok'),
+                                      child: const Text('Ok'),
+                                    ),
+                                  ],
+                                )
                             );
                             // Navigator.pop(context,"please fill all fields");
                           }

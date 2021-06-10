@@ -24,7 +24,7 @@ class _MatchState extends State<Match> {
           child: ConstrainedBox(
 
             constraints: BoxConstraints(
-                maxHeight: MediaQuery.of(context).size.height/1.2,
+              maxHeight: MediaQuery.of(context).size.height/1.2,
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -37,112 +37,112 @@ class _MatchState extends State<Match> {
                     padding: EdgeInsets.fromLTRB(0.0, 10, 0.0, 0.0),
                     // mainAxisAlignment: MainAxisAlignment.center,
                     child:
-                      Table(
-                        // border: TableBorder.all(),
-                        columnWidths: const <int, TableColumnWidth>{
-                          0: FlexColumnWidth(2.5)
-                        },
-                        defaultVerticalAlignment:
-                            TableCellVerticalAlignment.top,
-                        children: <TableRow>[
-                          TableRow(
-                            children: <Widget>[
-                              Container(
-                                  height: 45,
-                                  child: Text('Players'),
-                                  alignment: Alignment.center,
-                                  // color: Colors.white,
-                                ),
-                              Container(
-                                height: 40,
-                                child: Text('R'),
-                                alignment: Alignment.center,
-                                color: Colors.redAccent,
-                              ),
-                              Container(
-                                height: 40,
-                                child: Text('B'),
-                                alignment: Alignment.center,
-                                color: Colors.blueAccent,
-                              ),
-                              Container(
-                                height: 40,
-                                child: Text('4s'),
-                                alignment: Alignment.center,
-                                color: Colors.greenAccent,
-                              ),
-                              Container(
-                                height: 40,
-                                child: Text('6s'),
-                                alignment: Alignment.center,
-                                color: Colors.white,
-                              ),
-                              Container(
-                                height: 40,
-                                child: Text('SR'),
-                                alignment: Alignment.center,
-                                color: Colors.grey,
-                              )
-                            ],
-                          ),
-                          TableRow(
-                            children: <Widget>[
-                              Container(
-                                height: 34,
-                                color: Colors.white,
-                              ),
-                              Container(
-                                height: 44,
-                                color: Colors.redAccent,
-                              ),
-                              Container(
-                                height: 44,
-                                color: Colors.blueAccent,
-                              ),
-                              Container(
-                                height: 44,
-                                color: Colors.greenAccent,
-                              ),
-                              Container(
-                                height: 44,
-                                color: Colors.white,
-                              ),
-                              Container(
-                                height: 45,
-                                color: Colors.grey,
-                              )
-                            ],
-                          ),
-                          TableRow(
-                            children: <Widget>[
-                              Container(
-                                height: 34,
-                                color: Colors.white,
-                              ),
-                              Container(
-                                height: 45,
-                                color: Colors.redAccent,
-                              ),
-                              Container(
-                                height: 45,
-                                color: Colors.blueAccent,
-                              ),
-                              Container(
-                                height: 45,
-                                color: Colors.greenAccent,
-                              ),
-                              Container(
-                                height: 45,
-                                color: Colors.white,
-                              ),
-                              Container(
-                                height: 45,
-                                color: Colors.grey,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
+                    Table(
+                      // border: TableBorder.all(),
+                      columnWidths: const <int, TableColumnWidth>{
+                        0: FlexColumnWidth(2.5)
+                      },
+                      defaultVerticalAlignment:
+                      TableCellVerticalAlignment.top,
+                      children: <TableRow>[
+                        TableRow(
+                          children: <Widget>[
+                            Container(
+                              height: 45,
+                              child: Text('Players'),
+                              alignment: Alignment.center,
+                              // color: Colors.white,
+                            ),
+                            Container(
+                              height: 40,
+                              child: Text('R'),
+                              alignment: Alignment.center,
+                              color: Colors.redAccent,
+                            ),
+                            Container(
+                              height: 40,
+                              child: Text('B'),
+                              alignment: Alignment.center,
+                              color: Colors.blueAccent,
+                            ),
+                            Container(
+                              height: 40,
+                              child: Text('4s'),
+                              alignment: Alignment.center,
+                              color: Colors.greenAccent,
+                            ),
+                            Container(
+                              height: 40,
+                              child: Text('6s'),
+                              alignment: Alignment.center,
+                              color: Colors.white,
+                            ),
+                            Container(
+                              height: 40,
+                              child: Text('SR'),
+                              alignment: Alignment.center,
+                              color: Colors.grey,
+                            )
+                          ],
+                        ),
+                        TableRow(
+                          children: <Widget>[
+                            Container(
+                              height: 34,
+                              color: Colors.white,
+                            ),
+                            Container(
+                              height: 44,
+                              color: Colors.redAccent,
+                            ),
+                            Container(
+                              height: 44,
+                              color: Colors.blueAccent,
+                            ),
+                            Container(
+                              height: 44,
+                              color: Colors.greenAccent,
+                            ),
+                            Container(
+                              height: 44,
+                              color: Colors.white,
+                            ),
+                            Container(
+                              height: 45,
+                              color: Colors.grey,
+                            )
+                          ],
+                        ),
+                        TableRow(
+                          children: <Widget>[
+                            Container(
+                              height: 34,
+                              color: Colors.white,
+                            ),
+                            Container(
+                              height: 45,
+                              color: Colors.redAccent,
+                            ),
+                            Container(
+                              height: 45,
+                              color: Colors.blueAccent,
+                            ),
+                            Container(
+                              height: 45,
+                              color: Colors.greenAccent,
+                            ),
+                            Container(
+                              height: 45,
+                              color: Colors.white,
+                            ),
+                            Container(
+                              height: 45,
+                              color: Colors.grey,
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Row(

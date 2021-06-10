@@ -1,16 +1,14 @@
 
 
-// import 'dart:developer';
 
 import 'package:flutter/material.dart';
-// import 'dart:convert';
 
 class PlayersName extends StatefulWidget {
   // const PlayersName({Key key}) : super(key: key);
 
   @override
   _PlayersNameState createState() => _PlayersNameState();
-  
+
 }
 class Players{
   String title,subtitle;
@@ -39,8 +37,8 @@ class _PlayersNameState extends State<PlayersName> {
                     title: playersList[index].title,
                     subtitle: playersList[index].subtitle,
                   )
-                ),
               ),
+            ),
             ElevatedButton(
               // textColor: Colors.white60,
               // color: Colors.grey,
@@ -137,8 +135,8 @@ class PlayerCard extends StatelessWidget {
     return Card(
       child: ListTile(
         contentPadding: EdgeInsets.symmetric(
-          horizontal: 20.0,
-          vertical: 5.0
+            horizontal: 20.0,
+            vertical: 5.0
         ),
         title: Text(title),
         subtitle: Text(subtitle),
